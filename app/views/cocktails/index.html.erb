@@ -5,6 +5,9 @@
   <% @cocktails.each do |cocktail|  %>
     <li> <%= cocktail.name %> </li>
       <%= link_to 'Voir la recette', cocktail_path(cocktail) %>
+      <br>
+      <br>
+
   <% end %>
 </ul>
 
