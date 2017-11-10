@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-root 'cocktails#index'
-  resources :cocktails, only: %i(index show new create) do
-    resources :doses, only: [:new, :create, :destroy]
+  root "cocktails#index"
+
+  resources :cocktails, only: [:show, :new, :create] do
+    resources :doses, only: [:new, :create, :destroy], shallow: true
   end
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
