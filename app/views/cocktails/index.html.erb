@@ -1,3 +1,15 @@
-<% @cocktails.each do |cocktail| %>
-  <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
-<% end %>
+<div class="container">
+  <div class="row">
+
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-3">
+        <%= link_to cocktail_path(cocktail) do %>
+          <div class="card" style="background-image: url(<%= check_photo(cocktail) %>);">
+            <h2><%= cocktail.name %></h2>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+
+  </div>
+</div>
