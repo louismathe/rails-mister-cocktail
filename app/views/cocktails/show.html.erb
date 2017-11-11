@@ -16,3 +16,7 @@
 <% end %>
 
 <%= render "doses/form" %>
+
+<%= link_to "Delete", cocktail_path(@cocktail),
+        method: :delete,
+        data: { confirm: "Are you sure?" } %>

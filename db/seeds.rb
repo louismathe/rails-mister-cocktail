@@ -17,6 +17,8 @@ Ingredient.create(name: "Sparkling water")
 Ingredient.create(name: "Brown sugar")
 
 puts "creating new Cocktail"
-Cocktail.create(name: "Cuba Libre")
+a = Cocktail.create(name: "Cuba Libre")
 Cocktail.create(name: "Mojito")
 Cocktail.create(name: "Old Fashion")
+
+a.photo=("https://images.pexels.com/photos/613037/pexels-photo-613037.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb")

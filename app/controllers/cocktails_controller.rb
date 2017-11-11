@@ -22,6 +22,20 @@ class CocktailsController < ApplicationController
     end
   end
 
+def edit
+end
+
+def update
+end
+
+def destroy
+  @cocktail = Cocktail.find(params[:id])
+  @cocktail.destroy
+  redirect_to root_path
+end
+
+
+
   private
 
   def cocktail_params
